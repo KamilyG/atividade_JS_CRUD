@@ -1,5 +1,3 @@
-
-
 function gerarID() {
     return Math.floor(Math.random() * 1000)  //Gera IDs entre o e 999
 }
@@ -18,8 +16,6 @@ function cadastrarPessoa() {
     pessoasCadastradas.push(pessoa)    
 };
 
-//cadastrarPessoa(nome, idade, cidade);
-
 function atualizarPessoa(idAlterar, campoAlterar) {
     for (i in pessoasCadastradas) {
             if (idAlterar == pessoasCadastradas[i].ID) {
@@ -36,8 +32,6 @@ function atualizarPessoa(idAlterar, campoAlterar) {
             } 
     }
 }
-    
-//atualizarPessoa(832, "País");
 
 function deletarPessoa(idDeletar) {
     for (i in pessoasCadastradas) {
@@ -47,16 +41,11 @@ function deletarPessoa(idDeletar) {
     }
 }
 
-//deletarPessoa(1);
-
 function listarPessoas() {
     console.log(pessoasCadastradas);
 }
 
-//listarPessoas()
-
-let pessoasCadastradas = [{ID: 832, nome: 'Kamily', idade: '20', cidade: 'na'},
-{ID: 1, nome: 'Laura', idade: '21', cidade: 'sy'}];
+let pessoasCadastradas = [];
 
 while (true) {
     let opcao = prompt("O que vocÊ quer fazer?\n 1-Cadastrar Pessoa\n 2-Atualizar Pessoa\n 3-Deletar Pessoa\n 4-Listar Pessoas\n 5-Sair");
